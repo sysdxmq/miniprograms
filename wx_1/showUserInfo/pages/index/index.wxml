@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class="container">
+  <image src="{{src}}" mode="widthFix"></image>
+  <text>{{name}}</text>
+  <button wx:if="{{!hasUserInfo}}" bindtap="getMyInfo">
+    点击获取头像昵称
+  </button>
+</view>

@@ -23,3 +23,11 @@
 ### 实验5：仿微信“发现”页
 
 实验内容保存在文件夹app_1内
+
+### 实验6：安卓APP首页
+
+由于项目文件过多，难以完全上传，因此仅上传页面布局设计及图像资源文件所在文件夹
+
+页面布局设计文件：**app_2/mainPage/app/src/main/res/layout/activity_main.xml**
+
+图像资源文件位置：**app_2/mainPage/app/src/main/res/drawable**

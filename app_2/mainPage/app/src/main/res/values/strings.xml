@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">mainPage</string>
+    <string name="mainPage">首页</string>
+    <string name="roomcheck">验房</string>
+    <string name="dailyrootine">日常巡检</string>
+    <string name="keyManage">钥匙管理</string>
+    <string name="todoList">待办(10)</string>
+    <string name="more">更多</string>
+    <string name="report">统计</string>
+    <string name="manage">设置</string>
+    <string name="analyze">统计分析</string>
+</resources>

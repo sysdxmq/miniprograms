@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--滑动栏-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--标题栏-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/mainPage"
+                android:textSize="30sp"
+                android:textColor="#333"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+            <!--顶部图片-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/test_img"/>
+
+            <!--顶部菜单栏-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:weightSum="4"
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+
+                <!--验房-->
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/menu_img_roomcheck"
+                        android:background="@drawable/test_icon1"
+                        android:layout_marginTop="10dp"
+                        android:layout_centerHorizontal="true"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/menu_img_roomcheck"
+                        android:text="@string/roomcheck"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_horizontal"/>
+
+                </RelativeLayout>
+
+                <!--日常巡检-->
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/menu_img_dailyrootine"
+                        android:background="@drawable/test_icon2"
+                        android:layout_marginTop="10dp"
+                        android:layout_centerHorizontal="true"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/menu_img_dailyrootine"
+                        android:text="@string/dailyrootine"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_horizontal"/>
+                </RelativeLayout>
+
+                <!--钥匙管理-->
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/menu_img_keymanage"
+                        android:background="@drawable/key_manage"
+                        android:layout_marginTop="10dp"
+                        android:layout_centerHorizontal="true"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/menu_img_keymanage"
+                        android:text="@string/keyManage"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_horizontal"/>
+                </RelativeLayout>
+
+                <!--统计分析-->
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/menu_img_analyze"
+                        android:background="@drawable/analyze"
+                        android:layout_marginTop="10dp"
+                        android:layout_centerHorizontal="true"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/menu_img_analyze"
+                        android:text="@string/analyze"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_horizontal"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <!--中间消息模块-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textColor="#333"
+                    android:textSize="16sp"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/todoList"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="#666"
+                    android:text="@string/more"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!--底部tab栏-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:weightSum="4"
+        android:baselineAligned="false">
+
+        <!--首页-->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/tab_image_mainpage"
+                android:layout_marginTop="15dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/test_icon3"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:layout_below="@id/tab_image_mainpage"
+                android:layout_centerHorizontal="true"
+                android:text="@string/mainPage"/>
+
+        </RelativeLayout>
+
+        <!--验房-->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/tab_image_roomcheck"
+                android:layout_marginTop="15dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/todolist"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:layout_below="@id/tab_image_roomcheck"
+                android:layout_centerHorizontal="true"
+                android:text="@string/roomcheck"/>
+
+        </RelativeLayout>
+
+        <!--统计-->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/tab_image_report"
+                android:layout_marginTop="15dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/report"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:layout_below="@id/tab_image_report"
+                android:layout_centerHorizontal="true"
+                android:text="@string/report"/>
+
+        </RelativeLayout>
+
+        <!--设置-->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/tab_image_manage"
+                android:layout_marginTop="15dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/manage"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:layout_below="@id/tab_image_manage"
+                android:layout_centerHorizontal="true"
+                android:text="@string/manage"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+

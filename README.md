@@ -31,3 +31,7 @@
 页面布局设计文件：**app_2/mainPage/app/src/main/res/layout/activity_main.xml**
 
 图像资源文件位置：**app_2/mainPage/app/src/main/res/drawable**
+
+## 个人项目
+
+实验内容保存在文件夹self_project内

@@ -1,0 +1,127 @@
+/* pages/my/my.wxss */
+
+.myLogin {
+  background-color: #1999DF;
+  height: 300rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.myIcon {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+
+.nickName {
+  color: white;
+}
+
+.defaultIcon {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+
+.logIn {
+  width: 450rpx;
+  height: 100rpx;
+  background-color: #1999DF;
+}
+
+.analyze {
+  height: auto;
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+}
+
+.nothingStudying {
+  width: 400rpx;
+  height: 400rpx;
+  margin-left: 200rpx;
+  align-items: center;
+  display: flex;
+}
+
+.title {
+  display: flex;
+  position: relative;
+}
+
+.title text {
+  flex: 1;
+  text-align: center;
+}
+
+.lists {
+  display: flex;
+  position: relative;
+}
+
+.lists button {
+  flex: 1;
+  margin-top: 20rpx;
+  font-size: small;
+  background-color: rgb(95, 238, 207);
+}
+
+.lists text {
+  flex: 1;
+  text-align: center;
+  margin-top: 20rpx;
+  margin-right: 30rpx;
+}
+
+.completeTitle {
+  margin-left: 70rpx;
+  display: flex;
+  position: relative;
+}
+
+.completeTitle text {
+  flex: 1;
+  text-align: center;
+}
+
+.completeLists {
+  margin-left: 30rpx;
+  display: flex;
+  position: relative;
+}
+
+.completeLists button {
+  flex: 8;
+  margin-top: 20rpx;
+  font-size: small;
+  background-color: rgb(95, 238, 207);
+}
+
+.completeLists text {
+  flex: 7;
+  text-align: center;
+  margin-top: 20rpx;
+  margin-right: 40rpx;
+}
+
+.end {
+  padding: 400rpx;
+  text-align: center;
+  height: 1000000rpx;
+}
+
+.toTop[plain] {
+  position: fixed;
+  bottom: 30rpx;
+  right: 20rpx;
+  border: none;
+  padding: 0;
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.toTop image {
+  width: 80rpx;
+  height: 80rpx;
+}

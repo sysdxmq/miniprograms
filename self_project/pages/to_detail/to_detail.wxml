@@ -1,0 +1,10 @@
+<!--pages/to_detail/to_detail.wxml-->
+
+<view class="background">
+  <image src="../../images/background.png" mode="scaleToFill"></image>
+</view>
+
+<view class="content">
+  <text class="saying">{{saying}}</text>
+  <text class="source">——{{source}}</text>
+</view>

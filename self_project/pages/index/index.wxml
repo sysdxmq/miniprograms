@@ -1,0 +1,35 @@
+<!--pages/index/index.wxml-->
+
+<view class="main-window">
+
+  <view class="images">
+    <swiper autoplay interval="3000" duration="500">
+      <swiper-item>
+        <image src="../../images/study_1.png"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="../../images/study_2.png"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="../../images/study_3.png"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <view class="charts">
+    <canvas canvas-id="words" id="words" type="2d" class="charts" bindtouchend="goToDetail"></canvas>
+  </view>
+
+  <view class="buttons">
+    <picker class="showAll" range="{{res.series}}" range-key="name" header-text="选择内容" mode="selector" bindchange="goToDetail_fromAll">显示全部</picker>
+
+    <view class="addWord">
+      <input value="{{inputValue}}" id="addWord-input" bindconfirm="addWord" placeholder="添加内容" type="text" confirm-type="done"></input>
+    </view>
+
+    <button class="refresh" bindtap="drawCharts" plain="true">
+      <image src="../../images/refresh.png"></image>
+    </button>
+  </view>
+  
+</view>

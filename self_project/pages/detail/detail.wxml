@@ -1,0 +1,43 @@
+<!--pages/detail/detail.wxml-->
+<view class="page-detail">
+  <view class="name">
+    <text>{{name}}\n</text>
+    <button class="deleteDetail" plain="true" size="mini" bindtap="deleteDetail" >
+      <image src="../../images/delete.png"></image>
+    </button>
+  </view>
+  <view class="head">
+    <text class="num">进度：{{num}}% </text>
+    <view class="addToStudy">
+      <view wx:if="{{!isStuding}}">
+        <button bindtap="addToStudy" style="width: 80rpx; height: 80rpx;" plain="true">
+          <image src="../../images/add.png" style="width: 70rpx; height: 70rpx;"></image>
+        </button>
+      </view>
+      <view wx:else>
+        <button bindtap="addToStudy" style="width: 80rpx; height: 80rpx;" plain="true">
+          <image src="../../images/added.png" style="width: 70rpx; height: 70rpx;"></image>
+        </button>
+      </view>
+    </view>
+  </view>
+
+  <view class="detail">
+    <text>详细进度</text>
+  </view>
+
+  <scroll-view class="lists" scroll-y="true">
+    <checkbox-group class="checkboxs" bindchange="checkboxChange" >
+      <view wx:for="{{items}}" wx:key="value">
+        <checkbox value="{{item.value}}" checked="{{item.checked}}">{{item.name}}</checkbox>
+        <button class="deleteItem" plain="true" id="{{index}}" size="mini" bindtap="deleteItem">
+          <image src="../../images/delete.png"></image>
+        </button>
+      </view>
+    </checkbox-group>
+  </scroll-view>
+
+  <view class="addDetail">
+    <input value="{{inputValue}}" id="addDetail-input" bindconfirm="addDetail" placeholder="添加内容" type="text" confirm-type="done"></input>
+  </view>
+</view>

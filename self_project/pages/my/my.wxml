@@ -1,0 +1,71 @@
+<!--pages/my/my.wxml-->
+<!-- 登入面板 -->
+<view class="myLogin">
+  <block wx:if="{{isLogin}}">
+    <image class="myIcon" src="{{src}}"></image>
+    <text class="nickName">{{nickName}}</text>
+  </block>
+  <block wx:else>
+    <image class="defaultIcon" src="../../images/default_person_icon.png"></image>
+    <button class="logIn" bindtap="getMyInfo">
+      未登入，点此登入
+    </button>
+  </block>
+</view>
+
+<view class="nothingStudying" style="margin-left: 300rpx;" wx:if="{{isLogin === false}}">
+  <text>请先登入</text>
+</view>
+
+<view wx:else>
+  <view style="margin-top: 30rpx; margin-left: 30rpx;">
+    <text style="font-size: large;">正在学习</text>
+  </view>
+
+  <scroll-view class="analyze" scroll-y="true">
+    <view  class="nothingStudying" wx:if="{{studying.length === 0}}">
+      <text>没有正在学习的内容</text>
+    </view>
+    <view wx:else>
+      <view class="title">
+        <text>学习内容</text>
+        <text>进度</text>
+      </view>
+      <view class="lists" wx:for="{{studying}}" wx:if="{{res.series[item].detail.num < 100}}" wx:key="*this">
+        <button id="{{item}}" bindtap="goToDetail">{{res.series[item].name}}</button>
+        <text>{{res.series[item].detail.num}}%</text>
+      </view>
+    </view>
+  </scroll-view>
+
+  <view style="margin-top: 50rpx; margin-left: 30rpx; margin-bottom: 20rpx;">
+    <text style="font-size: large;">完成内容</text>
+  </view>
+
+  <scroll-view class="completeLog" scroll-y="true">
+    <!-- 完成列表 -->
+    <view  class="nothingStudying" wx:if="{{studying.length === 0}}">
+      <text>无完成内容</text>
+    </view>
+    <view wx:else>
+      <view class="completeTitle">
+        <text>学习内容</text>
+        <text>完成时间</text>
+      </view>
+      <view class="completeLists" wx:for="{{studying}}" wx:if="{{res.series[item].detail.num >= 100}}" wx:key="*this">
+        <button id="{{item}}" bindtap="goToDetail">{{res.series[item].name}}</button>
+        <text>{{res.series[item].detail.date.year}}-{{res.series[item].detail.date.month}}-{{res.series[item].detail.date.day}}</text>
+      </view>
+    </view>
+  </scroll-view>
+
+  <view class="end" style="margin-top: 10rpx; margin-bottom: 30rpx;">
+    <text>学海无涯</text>
+  </view>
+
+  <button class="toTop" bindtap="toTop" plain="true">
+    <image src="../../images/up.png"></image>
+  </button>
+</view>
+
+

@@ -1,0 +1,95 @@
+/* pages/detail/detail.wxss */
+
+.name {
+  text-align: center;
+  font-size: large;
+  margin-top: 20rpx;
+  display: flex;
+  position: relative;
+}
+
+.name text {
+  flex: 1;
+  text-align: end;
+  margin-right: 70rpx;
+}
+
+.deleteDetail[plain] {
+  margin-left: 80rpx;
+  margin-right: 40rpx;
+  border: none;
+  padding: 0;
+}
+
+.deleteDetail image {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.head {
+  margin-top: 20rpx;
+  display: flex;
+  position: relative;
+}
+
+.num {
+  flex: 3;
+  text-align: end;
+  margin-right: 140rpx;
+}
+
+.addToStudy {
+  flex: 1;
+}
+
+.addToStudy button {
+  border: none;
+  padding: 0;
+}
+
+.detail {
+  margin-left: 25rpx;
+  margin-bottom: 20rpx;
+}
+
+.lists {
+  margin-left: 40rpx;
+  margin-bottom: 20rpx;
+  height: 780rpx;
+}
+
+.checkboxs {
+  height: 80rpx;
+  flex-direction: row;
+  position: relative;
+}
+
+.checkboxs view {
+  margin-top: 10rpx;
+}
+
+.deleteItem[plain] {
+  position: absolute;
+  right: 80rpx;
+  border: none;
+  padding: 0;
+}
+
+.deleteItem image {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.addDetail {
+  height: 100rpx;
+  margin-top: 20rpx;
+  margin-left: 50rpx;
+  margin-right: 100rpx;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+  background-color:chartreuse;
+  border-radius: 5%;
+}
